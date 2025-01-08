@@ -4,7 +4,7 @@
 Welcome to the documentation for the **Chisel-Based Pixel-Art Scaling Hardware Accelerator**. This project represents the final assignment for the Computer Architecture course (113-1 Semester). In its initial version, the accelerator facilitates image conversion and incorporates several fundamental features. Future iterations will focus on enhancing performance through hardware acceleration.
 
 
-[GitHub Repository](https://github.com/whoishuni/pixel-art-xbr-scaling)
+[GitHub Repository](https://github.com/whoishuni/Pixel-art-scaling-Accelerator-in-Chisel)
 
 Table of Contents
 -----------------
