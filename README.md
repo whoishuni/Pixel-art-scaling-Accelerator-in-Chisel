@@ -1,12 +1,8 @@
-Chisel-Based Pixel-Art Scaling Hardware Accelerator (Version 1.0)
-=================================================================
+# Pixel-art scaling Accelerator in Chisel
+> 郭昱辰, 簡子昕
 
 Welcome to the documentation for the **Chisel-Based Pixel-Art Scaling Hardware Accelerator**. This project represents the final assignment for the Computer Architecture course (113-1 Semester). In its initial version, the accelerator facilitates image conversion and incorporates several fundamental features. Future iterations will focus on enhancing performance through hardware acceleration.
 
-**Final Project for 113-1 Semester - Computer Architecture**
-
-1. **Yu Chen Kuo (郭昱辰)**, Student ID: VX6132022
-2. **Tzu Hsin Chien (簡子昕)**, Student ID: VX6132048
 
 [GitHub Repository](https://github.com/whoishuni/pixel-art-xbr-scaling)
 
@@ -172,7 +168,7 @@ class EnhancedEdgeDetector extends Module {
 
 ### Improved Pixel Interpolator Module
 
-```scala=
+```scala
 /**
   * Improved Pixel Interpolator Module
   * Performs intelligent interpolation based on edge direction and strength.
@@ -255,7 +251,7 @@ class EnhancedPixelInterpolator(scaleFactor: Int) extends Module {
 
 ### Extended PixelArtScaler Module
 
-```scala=
+```scala
 /**
   * Extended PixelArtScaler Module with Enhanced Edge Detection and Pixel Interpolation
   */
@@ -370,7 +366,7 @@ class EnhancedPixelArtScaler(width: Int, height: Int, scaleFactor: Int) extends 
 
 ### Main Program
 
-```scala=
+```scala
 /**
   * Main Program
   * Reads an image → Reads scaling factor → Prepares output matrix → Simulates scaling using Chisel → Writes back the image
@@ -526,7 +522,13 @@ Follow these steps to run the project:
      sbt run
      ```
     *   Execute the `PixelArtScale` main program and input the desired scaling factor (e.g., 2 for 2x scaling).
-    
+    ```scale
+    sbt "runMain pixelart.PixelArtScale"
+    ```
+    *    The PixelArtScale main program is located in the file:
+    ```text
+    .\src\main\scala\Pixel Art\PixelArtScale.scala
+    ```
 
      
     
@@ -541,11 +543,13 @@ Output Results
 After running the program, you will obtain the scaled image. Below is an example comparison of the original and scaled images:
 
 ### Original Image
-![image](https://hackmd.io/_uploads/Hy4eGCvIyx.png)
+![image](https://hackmd.io/_uploads/r1Uw9isUyl.png)
+
 
 ### Scaled Image
 
-![image](https://hackmd.io/_uploads/ByfKo0PL1l.png)
+![output](https://hackmd.io/_uploads/Bkhv9isLkl.png)
+
 
 
 
@@ -564,47 +568,4 @@ In this project, we successfully designed and implemented a Chisel-based pixel a
 - **Hardware Resource Optimization**: Streamlining module designs to minimize hardware resource consumption, ensuring efficient utilization and maximizing performance.
 
 These enhancements aim to elevate the pixel art scaling solution's performance and versatility, establishing it as a robust and efficient tool for various digital applications. By focusing on hardware acceleration and algorithm optimization, future versions will deliver superior scalability and image fidelity, meeting the demanding needs of modern pixel art processing.
-
-
-
-Version History
----------------
-
-### Version 1.0
-
-*   **Features**:
-    *   Basic edge detection module.
-    *   Intelligent pixel interpolation module.
-    *   Complete pixel art scaling workflow.
-*   **Limitations**:
-    *   Hardware acceleration not implemented.
-    *   Interpolation strategies are rudimentary and do not address all edge scenarios.
-
-* * *
-
-# Version History Continued
-
-*This is the initial release. Future versions will be detailed below.*
-
-
-
-### Version 1.1
-
-*Version 1.0 Processing Method: The system currently utilizes a sequential processing approach, handling one pixel at a time. This ensures high accuracy in scaling but poses limitations in terms of speed and efficiency.*
-
-*Future Enhancement: To overcome these limitations, the next version will incorporate parallel computation strategies. By enabling the simultaneous processing of multiple pixels, the scaling process will be significantly accelerated, facilitating real-time image processing and enhancing overall performance.*
-
-### Version 2.0
-
-*Scheduled for future updates.*
-
-
-
-## Contact
-
-For any inquiries or feedback, please visit our [GitHub Repository](https://github.com/whoishuni/pixel-art-xbr-scaling).
-
-* * *
-
-© 2025 Yu Chen Kuo and Tzu Hsin Chien
 
